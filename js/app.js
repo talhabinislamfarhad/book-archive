@@ -61,6 +61,7 @@ const displayBook = (data, books) => {
     }
     // Foreach loop
     books.forEach(book => {
+        errorMessage.innerHTML = "";
         const imgUrl = `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`;
         const div = document.createElement('div');
         div.classList.add('col');
@@ -78,5 +79,4 @@ const displayBook = (data, books) => {
     });
     toggleSpinner('none');
     toggleSearchResult('block');
-    errorMessage.innerHTML = "";
 }
