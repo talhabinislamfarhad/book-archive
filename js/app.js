@@ -74,4 +74,5 @@ const displayBook = (data, books) => {
     });
     toggleSpinner('none');
     toggleSearchResult('block');
+    errorMessage.innerHTML = "";
 }
