@@ -3,10 +3,12 @@ const searchInput = document.getElementById('search-input-field');
 const bookContainer = document.getElementById('book-container');
 const errorMessage = document.getElementById('error-message');
 const countData = document.getElementById('count');
+
 // Add spinner function 
 const toggleSpinner = displayStyle => {
     document.getElementById('spinner-container').style.display = displayStyle;
 }
+
 // Add toggleSearchResultDiv function
 const toggleSearchResultDiv = displayStyle => {
     document.getElementById('count-div').style.display = displayStyle;
@@ -14,6 +16,7 @@ const toggleSearchResultDiv = displayStyle => {
 const toggleSearchResult = displayStyle => {
     document.getElementById('count').style.display = displayStyle;
 }
+
 // Search button function
 const loadBook = () => {
     const searchField = searchInput.value;
@@ -40,6 +43,7 @@ const loadBook = () => {
         .then(res => res.json())
         .then(data => displayBook(data, data.docs))
 }
+
 //Display data
 const displayBook = (data, books) => {
     const count = books.length;
