@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Archive</title>
-    <!-- bootstrap css cdn link -->
+    <!-- Bootstrap css cdn link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- Internal CSS -->
     <style>
         #count-div {
             display: none;
@@ -17,11 +18,11 @@
 </head>
 
 <body>
-    <!-- search field -->
+    <!-- Search field -->
     <div class="container mt-4">
         <div class="w-100 mx-auto">
             <div class="input-group mb-3">
-                <input id="search-input" type="text" class="form-control" placeholder="Search your book"
+                <input id="search-input-field" type="text" class="form-control" placeholder="Search your book"
                     aria-label="Search your book" aria-describedby="search-btn" />
                 <button class="btn btn-success" type="button" onclick="loadBook()">
                     Search
@@ -29,17 +30,17 @@
             </div>
         </div>
     </div>
-    <!-- spinner -->
+    <!-- Spinner -->
     <div id="spinner-container" style="display: none" class="container mt-5 text-center">
         <div class="spinner-grow text-success" role="status">
             <span class="visually-hidden">Loading...</span>
         </div>
     </div>
-    <!-- error handaling message -->
+    <!-- Error handaling message -->
     <div class="container mt-4">
         <div id="error-message"></div>
     </div>
-    <!-- search result count -->
+    <!-- Search result count -->
     <div class="container mt-4" id="count-div">
         <div class="card w-100 mx-auto">
             <div class="card-body text-center" id="count">
@@ -54,12 +55,12 @@
 
         </div>
     </div>
-    <!-- bootstrap js cdn link  -->
+    <!-- Bootstrap js cdn link  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
-    </script>
-    <!-- app . jss  -->
-    <script src="assets/js/app.js"></script>
+        </script>
+    <!-- app.js  -->
+    <script src="js/app.js"></script>
 </body>
 
 </html>
