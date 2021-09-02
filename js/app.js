@@ -44,7 +44,7 @@ const loadBook = () => {
 const displayBook = (data, books) => {
     const count = books.length;
     const AllBookCount = data.numFound;
-    countData.innerHTML = `<span class="fw-bold text-info fs-5">Showing : ${AllBookCount} OF ${count} Found Result</span>`;
+    countData.innerHTML = `<span class="fw-bold text-secondary fs-5">Showing : ${AllBookCount} OF ${count} Found Result</span>`;
     // Error handaling
     if (books.length === 0) {
         errorMessage.innerHTML = `<div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -63,11 +63,11 @@ const displayBook = (data, books) => {
         div.innerHTML = `
         <div class="card h-100">
            <img src="${imgUrl ? imgUrl : 'N/A'}" class="card-img-top" style="height:300px" alt="${book.title}" />
-            <h6 class="card-title p-3"><span class="fw-bold text-info fs-5">Name :</span> ${book.title}</h6>
+            <h6 class="card-title p-3"><span class="fw-bold text-success fs-5">Name :</span> ${book.title}</h6>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item" style = "font-size:1rem; font-weight:500"><span class="fw-bold text-info fs-5">Author :</span> ${book.author_name ? book.author_name[0] : 'N/A'}</li>
-                <li class="list-group-item" style = "font-size:1rem; font-weight:500"><span class="fw-bold text-info fs-5">Publisher :</span> ${book.publisher ? book.publisher[0] : 'N/A'}</li>
-                <li class="list-group-item" style = "font-size:1rem; font-weight:500"><span class="fw-bold text-info fs-5">First Publish Year :</span> ${book.first_publish_year ? book.first_publish_year : 'N/A'}</li>
+                <li class="list-group-item" style = "font-size:1rem; font-weight:500"><span class="fw-bold text-success fs-5">Author :</span> ${book.author_name ? book.author_name[0] : 'N/A'}</li>
+                <li class="list-group-item" style = "font-size:1rem; font-weight:500"><span class="fw-bold text-success fs-5">Publisher :</span> ${book.publisher ? book.publisher[0] : 'N/A'}</li>
+                <li class="list-group-item" style = "font-size:1rem; font-weight:500"><span class="fw-bold text-success fs-5">First Publish Year :</span> ${book.first_publish_year ? book.first_publish_year : 'N/A'}</li>
             </ul>
         </div>`;
         bookContainer.appendChild(div);
